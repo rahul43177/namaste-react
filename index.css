@@ -1,4 +1,23 @@
-#root {
-    background-color: red;
-    border:  2px solid black;
-}
+/* index.css */
+body {
+    /* Center the content horizontally */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  
+    /* Set the height of the viewport to center vertically (optional) */
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+  }
+  
+  #name {
+    /* Add some styling to make it visually appealing (optional) */
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 24px;
+    font-weight: bold;
+    padding: 20px;
+  }
+  
