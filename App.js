@@ -1,35 +1,73 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-
-// const heading = React.createElement("h1")
-// const root = ReactDOM.createRoot(document.getElementById("root"))
-//this method is tedious and complicated when we want to write HTML 
-//hence we can write HTML inside react using JSX 
-//above code in JSX 
-// const heading = <h1 id='title' className='heading'>This is Rahul writing from JSX</h1>
-
-// const root = ReactDOM.createRoot(document.getElementById("root"))
-
-// root.render(heading)
-//this is way we can write JSX 
-
-// const HeaderComponent = () => {
-//     return (
-//         <div>
-//             <h1>
-//                 This is H2 tag
-//             </h1>
-//         </div>
-//     )
-// }
-
+/*
+        Header
+            -Logo 
+            -nav Items(right side)
+            -cart
+        Body 
+            -Search bar 
+            -Rest list
+            - restaurant Card 
+                -Image
+                -Name 
+                -Rating 
+                -Cusines
+        Footer
+            -links
+            -copy
+*/
 const root = ReactDOM.createRoot(document.getElementById("root"))
-const HeaderComponent = (root) => (
-    <div>
-        <h1>Hello World</h1>
-        {console.log(h1)}
-    </div>
-)
+
+const Title = () =>{
+    return (
+        <a href='/'>
+        <img 
+        className='logo'
+        src='https://i.pinimg.com/474x/e6/17/f1/e617f1bfb9af4d9cf132cd3dec0da072.jpg' 
+        alt='logo' 
+            />
+        </a>
+        
+    )
+}
+const Header = () =>{
+    return ( <div className='header'>
+            <Title/>
+            <div className='nav-items'>
+                <ul>
+                    <li>Home</li>
+                    <li>About Us</li>
+                    <li>Contact Us</li>
+                    <li>Cart</li>
+                </ul>
+            </div>
+        </div>
+    )
+}
+
+const Body = () =>{
+    return (
+        <h4>Body</h4>
+    )
+}
+const Footer = () =>{
+    return (
+        <h4>Footer</h4>
+    )
+}
+
+const AppLayout = () =>{
+    return ( 
+    <React.Fragment>
+       <Header/> 
+       <Body/> 
+       <Footer/> 
+    </React.Fragment>
+    )
+}
 
 
-root.render(<HeaderComponent/>)
+
+
+root.render(<AppLayout/>)

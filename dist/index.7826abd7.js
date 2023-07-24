@@ -2947,49 +2947,159 @@ var _react = require("react");
 var _reactDefault = parcelHelpers.interopDefault(_react);
 var _client = require("react-dom/client");
 var _clientDefault = parcelHelpers.interopDefault(_client);
-// const heading = React.createElement("h1")
-// const root = ReactDOM.createRoot(document.getElementById("root"))
-//this method is tedious and complicated when we want to write HTML 
-//hence we can write HTML inside react using JSX 
-//above code in JSX 
-// const heading = <h1 id='title' className='heading'>This is Rahul writing from JSX</h1>
-// const root = ReactDOM.createRoot(document.getElementById("root"))
-// root.render(heading)
-//this is way we can write JSX 
-// const HeaderComponent = () => {
-//     return (
-//         <div>
-//             <h1>
-//                 This is H2 tag
-//             </h1>
-//         </div>
-//     )
-// }
-const root = (0, _clientDefault.default).createRoot(document.getElementById("root"));
-const HeaderComponent = (root)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+/*
+        Header
+            -Logo 
+            -nav Items(right side)
+            -cart
+        Body 
+            -Search bar 
+            -Rest list
+            - restaurant Card 
+                -Image
+                -Name 
+                -Rating 
+                -Cusines
+        Footer
+            -links
+            -copy
+*/ const root = (0, _clientDefault.default).createRoot(document.getElementById("root"));
+const Title = ()=>{
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("a", {
+        href: "/",
+        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
+            className: "logo",
+            src: "https://i.pinimg.com/474x/e6/17/f1/e617f1bfb9af4d9cf132cd3dec0da072.jpg",
+            alt: "logo"
+        }, void 0, false, {
+            fileName: "App.js",
+            lineNumber: 23,
+            columnNumber: 9
+        }, undefined)
+    }, void 0, false, {
+        fileName: "App.js",
+        lineNumber: 22,
+        columnNumber: 10
+    }, undefined);
+};
+_c = Title;
+const Header = ()=>{
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+        className: "header",
         children: [
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
-                children: "Hello World"
-            }, void 0, false, {
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(Title, {}, void 0, false, {
                 fileName: "App.js",
                 lineNumber: 28,
-                columnNumber: 9
+                columnNumber: 13
             }, undefined),
-            void 0
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                className: "nav-items",
+                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("ul", {
+                    children: [
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
+                            children: "Home"
+                        }, void 0, false, {
+                            fileName: "App.js",
+                            lineNumber: 31,
+                            columnNumber: 21
+                        }, undefined),
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
+                            children: "About Us"
+                        }, void 0, false, {
+                            fileName: "App.js",
+                            lineNumber: 32,
+                            columnNumber: 21
+                        }, undefined),
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
+                            children: "Contact Us"
+                        }, void 0, false, {
+                            fileName: "App.js",
+                            lineNumber: 33,
+                            columnNumber: 21
+                        }, undefined),
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
+                            children: "Cart"
+                        }, void 0, false, {
+                            fileName: "App.js",
+                            lineNumber: 34,
+                            columnNumber: 21
+                        }, undefined)
+                    ]
+                }, void 0, true, {
+                    fileName: "App.js",
+                    lineNumber: 30,
+                    columnNumber: 17
+                }, undefined)
+            }, void 0, false, {
+                fileName: "App.js",
+                lineNumber: 29,
+                columnNumber: 13
+            }, undefined)
         ]
     }, void 0, true, {
         fileName: "App.js",
         lineNumber: 27,
-        columnNumber: 33
+        columnNumber: 10
     }, undefined);
-_c = HeaderComponent;
-root.render(/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(HeaderComponent, {}, void 0, false, {
+};
+_c1 = Header;
+const Body = ()=>{
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h4", {
+        children: "Body"
+    }, void 0, false, {
+        fileName: "App.js",
+        lineNumber: 40,
+        columnNumber: 10
+    }, undefined);
+};
+_c2 = Body;
+const Footer = ()=>{
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h4", {
+        children: "Footer"
+    }, void 0, false, {
+        fileName: "App.js",
+        lineNumber: 43,
+        columnNumber: 10
+    }, undefined);
+};
+_c3 = Footer;
+const AppLayout = ()=>{
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactDefault.default).Fragment, {
+        children: [
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(Header, {}, void 0, false, {
+                fileName: "App.js",
+                lineNumber: 47,
+                columnNumber: 8
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(Body, {}, void 0, false, {
+                fileName: "App.js",
+                lineNumber: 48,
+                columnNumber: 8
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(Footer, {}, void 0, false, {
+                fileName: "App.js",
+                lineNumber: 49,
+                columnNumber: 8
+            }, undefined)
+        ]
+    }, void 0, true, {
+        fileName: "App.js",
+        lineNumber: 46,
+        columnNumber: 10
+    }, undefined);
+};
+_c4 = AppLayout;
+root.render(/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(AppLayout, {}, void 0, false, {
     fileName: "App.js",
-    lineNumber: 31,
+    lineNumber: 52,
     columnNumber: 13
 }, undefined));
-var _c;
-$RefreshReg$(_c, "HeaderComponent");
+var _c, _c1, _c2, _c3, _c4;
+$RefreshReg$(_c, "Title");
+$RefreshReg$(_c1, "Header");
+$RefreshReg$(_c2, "Body");
+$RefreshReg$(_c3, "Footer");
+$RefreshReg$(_c4, "AppLayout");
 
   $parcel$ReactRefreshHelpers$c1db.postlude(module);
 } finally {
