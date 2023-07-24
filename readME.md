@@ -1,7 +1,4 @@
-# Class number 2 in course
+# Class number 4 in course
+## Laying the Foundation
 
-* What is React ? 
-* Difference between Library and framework 
-* What is CDN ?
-* What is cross-origin ? 
-* 
+ 

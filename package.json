@@ -3,15 +3,19 @@
   "version": "1.0.0",
   "description": "* What is React ? \r * Difference between Library and framework \r * What is CDN ?\r * What is cross-origin ? \r *",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "parcel index.html",
+    "build": "parcel build index.html",
+    "test": "jest"
   },
   "author": "Rahul Mishra",
   "license": "ISC",
   "devDependencies": {
+    "@babel/core": "^7.22.9",
     "parcel": "^2.9.3",
     "process": "^0.11.10"
   },
   "dependencies": {
+    "babel-plugin-transform-remove-console": "^6.9.4",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   }
