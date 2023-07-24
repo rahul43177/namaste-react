@@ -2952,16 +2952,44 @@ var _clientDefault = parcelHelpers.interopDefault(_client);
 //this method is tedious and complicated when we want to write HTML 
 //hence we can write HTML inside react using JSX 
 //above code in JSX 
-const heading = /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
-    id: "title",
-    children: "This is Rahul writing from JSX"
-}, void 0, false, {
-    fileName: "App.js",
-    lineNumber: 9,
-    columnNumber: 17
-}, undefined);
+// const heading = <h1 id='title' className='heading'>This is Rahul writing from JSX</h1>
+// const root = ReactDOM.createRoot(document.getElementById("root"))
+// root.render(heading)
+//this is way we can write JSX 
+// const HeaderComponent = () => {
+//     return (
+//         <div>
+//             <h1>
+//                 This is H2 tag
+//             </h1>
+//         </div>
+//     )
+// }
 const root = (0, _clientDefault.default).createRoot(document.getElementById("root"));
-root.render(heading); //this is way we can write JSX
+const HeaderComponent = (root)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+        children: [
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
+                children: "Hello World"
+            }, void 0, false, {
+                fileName: "App.js",
+                lineNumber: 28,
+                columnNumber: 9
+            }, undefined),
+            void 0
+        ]
+    }, void 0, true, {
+        fileName: "App.js",
+        lineNumber: 27,
+        columnNumber: 33
+    }, undefined);
+_c = HeaderComponent;
+root.render(/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(HeaderComponent, {}, void 0, false, {
+    fileName: "App.js",
+    lineNumber: 31,
+    columnNumber: 13
+}, undefined));
+var _c;
+$RefreshReg$(_c, "HeaderComponent");
 
   $parcel$ReactRefreshHelpers$c1db.postlude(module);
 } finally {

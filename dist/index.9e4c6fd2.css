@@ -1,19 +1,11 @@
-body {
+.heading {
+  border: 2px solid green;
   justify-content: center;
   align-items: center;
-  height: 100vh;
-  margin: 0;
-  padding: 0;
+  width: 73%;
+  height: 50%;
+  margin: 50% auto auto;
   display: flex;
-}
-
-#name {
-  background-color: #f0f0f0;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  padding: 20px;
-  font-size: 24px;
-  font-weight: bold;
 }
 
 /*# sourceMappingURL=index.9e4c6fd2.css.map */
