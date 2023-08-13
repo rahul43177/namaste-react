@@ -2,22 +2,32 @@
   display: flex;
   justify-content: space-between;
   margin: 10px;
-  border: 1px solid black;
+  border: 2px solid black;
 }
 
-.nav-items > ul{
-  list-style: none;
+.nav-items > ul {
+  list-style-type: none;
   display: flex;
-
 }
-
 .nav-items > ul > li {
   padding: 10px;
 }
 
 .logo {
-  padding-left: 4px;
-  width: 114px;
-  height: 78px;
-  padding-top: 5px;
+  width: 104px;
+  margin: 10px 10px 10px 10px;
+}
+
+.card {
+  width: 200px;
+  border: 2px solid red;
+  padding: 10px;
+  margin: 10px;
+}
+.card > img {
+  width: 100%;
+}
+.restaurant-list {
+  display: flex;
+  flex-wrap: wrap;
 }

@@ -2947,50 +2947,33 @@ var _react = require("react");
 var _reactDefault = parcelHelpers.interopDefault(_react);
 var _client = require("react-dom/client");
 var _clientDefault = parcelHelpers.interopDefault(_client);
-/*
-        Header
-            -Logo 
-            -nav Items(right side)
-            -cart
-        Body 
-            -Search bar 
-            -Rest list
-            - restaurant Card 
-                -Image
-                -Name 
-                -Rating 
-                -Cusines
-        Footer
-            -links
-            -copy
-*/ const root = (0, _clientDefault.default).createRoot(document.getElementById("root"));
-const Title = ()=>{
-    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("a", {
+const root = (0, _clientDefault.default).createRoot(document.getElementById("root"));
+const Title = ()=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("a", {
         href: "/",
         children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
             className: "logo",
-            src: "https://i.pinimg.com/474x/e6/17/f1/e617f1bfb9af4d9cf132cd3dec0da072.jpg",
-            alt: "logo"
+            alt: "Logo",
+            src: "https://i.pinimg.com/474x/e6/17/f1/e617f1bfb9af4d9cf132cd3dec0da072.jpg"
         }, void 0, false, {
             fileName: "App.js",
-            lineNumber: 23,
-            columnNumber: 9
+            lineNumber: 5,
+            columnNumber: 5
         }, undefined)
     }, void 0, false, {
         fileName: "App.js",
-        lineNumber: 22,
-        columnNumber: 10
+        lineNumber: 4,
+        columnNumber: 21
     }, undefined);
-};
 _c = Title;
-const Header = ()=>{
+const HeaderComponent = ()=>{
+    //header component which contains - logo and nav items
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
         className: "header",
         children: [
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(Title, {}, void 0, false, {
                 fileName: "App.js",
-                lineNumber: 28,
-                columnNumber: 13
+                lineNumber: 10,
+                columnNumber: 7
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                 className: "nav-items",
@@ -3000,106 +2983,999 @@ const Header = ()=>{
                             children: "Home"
                         }, void 0, false, {
                             fileName: "App.js",
-                            lineNumber: 31,
-                            columnNumber: 21
+                            lineNumber: 13,
+                            columnNumber: 11
                         }, undefined),
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
-                            children: "About Us"
+                            children: "About"
                         }, void 0, false, {
                             fileName: "App.js",
-                            lineNumber: 32,
-                            columnNumber: 21
+                            lineNumber: 14,
+                            columnNumber: 11
                         }, undefined),
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
-                            children: "Contact Us"
+                            children: "Contact"
                         }, void 0, false, {
                             fileName: "App.js",
-                            lineNumber: 33,
-                            columnNumber: 21
+                            lineNumber: 15,
+                            columnNumber: 11
                         }, undefined),
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
                             children: "Cart"
                         }, void 0, false, {
                             fileName: "App.js",
-                            lineNumber: 34,
-                            columnNumber: 21
+                            lineNumber: 16,
+                            columnNumber: 11
                         }, undefined)
                     ]
                 }, void 0, true, {
                     fileName: "App.js",
-                    lineNumber: 30,
-                    columnNumber: 17
+                    lineNumber: 12,
+                    columnNumber: 9
                 }, undefined)
             }, void 0, false, {
                 fileName: "App.js",
-                lineNumber: 29,
-                columnNumber: 13
+                lineNumber: 11,
+                columnNumber: 7
             }, undefined)
         ]
     }, void 0, true, {
         fileName: "App.js",
-        lineNumber: 27,
+        lineNumber: 9,
         columnNumber: 10
     }, undefined);
 };
-_c1 = Header;
+_c1 = HeaderComponent;
+// const burgerKing = {
+//     name : "Burger King" ,
+//     image : 'https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/yzpwhtsc7dkznujwlqer' ,
+//     cusines : ["Burgers" , "American"] ,
+//     rating : "4.2"
+// }
+const restaurantList = [
+    {
+        info: {
+            id: "416876",
+            name: "KFC",
+            cloudinaryImageId: "56c9ab92bd79745fd152a30fa2525426",
+            locality: "Nanjappa Main Road",
+            areaName: "New BEL Road",
+            costForTwo: "₹400 for two",
+            cuisines: [
+                "Burgers",
+                "Biryani",
+                "American",
+                "Snacks",
+                "Fast Food"
+            ],
+            avgRating: 4,
+            feeDetails: {
+                restaurantId: "416876",
+                fees: [
+                    {
+                        name: "BASE_DISTANCE",
+                        fee: 4200
+                    },
+                    {
+                        name: "BASE_TIME"
+                    },
+                    {
+                        name: "ANCILLARY_SURGE_FEE"
+                    }
+                ],
+                totalFee: 4200
+            },
+            parentId: "547",
+            avgRatingString: "4.0",
+            totalRatingsString: "1K+",
+            sla: {
+                deliveryTime: 18,
+                lastMileTravel: 2.7,
+                serviceability: "SERVICEABLE",
+                slaString: "18 mins",
+                lastMileTravelString: "2.7 km",
+                iconType: "ICON_TYPE_EMPTY"
+            },
+            availability: {
+                nextCloseTime: "2023-08-10 23:00:00",
+                opened: true
+            },
+            badges: {},
+            isOpen: true,
+            type: "F",
+            badgesV2: {
+                entityBadges: {
+                    imageBased: {},
+                    textBased: {},
+                    textExtendedBadges: {}
+                }
+            },
+            aggregatedDiscountInfoV3: {
+                header: "EVERY ITEM",
+                subHeader: "@ ₹179",
+                discountCalloutInfo: {
+                    message: "Free Delivery",
+                    logoCtx: {
+                        logo: "v1655895371/free_delivery_logo_hqipbo.png"
+                    }
+                }
+            },
+            orderabilityCommunication: {
+                title: {},
+                subTitle: {},
+                message: {},
+                customIcon: {}
+            },
+            differentiatedUi: {
+                displayType: "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
+                differentiatedUiMediaDetails: {
+                    mediaType: "ADS_MEDIA_ENUM_IMAGE",
+                    lottie: {},
+                    video: {}
+                }
+            },
+            reviewsSummary: {},
+            displayType: "RESTAURANT_DISPLAY_TYPE_DEFAULT",
+            restaurantOfferPresentationInfo: {}
+        },
+        analytics: {},
+        cta: {
+            link: "https://www.swiggy.com/restaurants/kfc-nanjappa-main-road-new-bel-road-bangalore-416876",
+            type: "WEBLINK"
+        }
+    },
+    {
+        info: {
+            id: "111687",
+            name: "Leon's - Burgers & Wings (Leon Grill)",
+            cloudinaryImageId: "yzpwhtsc7dkznujwlqer",
+            locality: "G Block 60 Feet Main Road",
+            areaName: "Sahakara Nagar",
+            costForTwo: "₹300 for two",
+            cuisines: [
+                "American",
+                "Snacks",
+                "Turkish",
+                "Portuguese",
+                "Continental"
+            ],
+            avgRating: 4.2,
+            feeDetails: {
+                restaurantId: "111687",
+                fees: [
+                    {
+                        name: "BASE_DISTANCE",
+                        fee: 5800
+                    },
+                    {
+                        name: "BASE_TIME"
+                    },
+                    {
+                        name: "ANCILLARY_SURGE_FEE"
+                    }
+                ],
+                totalFee: 5800
+            },
+            parentId: "371281",
+            avgRatingString: "4.2",
+            totalRatingsString: "10K+",
+            sla: {
+                deliveryTime: 31,
+                lastMileTravel: 6.2,
+                serviceability: "SERVICEABLE",
+                slaString: "31 mins",
+                lastMileTravelString: "6.2 km",
+                iconType: "ICON_TYPE_EMPTY"
+            },
+            availability: {
+                nextCloseTime: "2023-08-11 04:00:00",
+                opened: true
+            },
+            badges: {},
+            isOpen: true,
+            aggregatedDiscountInfoV2: {},
+            type: "F",
+            badgesV2: {
+                entityBadges: {
+                    imageBased: {},
+                    textBased: {},
+                    textExtendedBadges: {}
+                }
+            },
+            orderabilityCommunication: {
+                title: {},
+                subTitle: {},
+                message: {},
+                customIcon: {}
+            },
+            differentiatedUi: {
+                displayType: "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
+                differentiatedUiMediaDetails: {
+                    mediaType: "ADS_MEDIA_ENUM_IMAGE",
+                    lottie: {},
+                    video: {}
+                }
+            },
+            reviewsSummary: {},
+            displayType: "RESTAURANT_DISPLAY_TYPE_DEFAULT",
+            restaurantOfferPresentationInfo: {}
+        },
+        analytics: {},
+        cta: {
+            link: "https://www.swiggy.com/restaurants/leons-burgers-and-wings-leon-grill-g-block-60-feet-main-road-sahakara-nagar-bangalore-111687",
+            type: "WEBLINK"
+        }
+    },
+    {
+        info: {
+            id: "23752",
+            name: "McDonald's",
+            cloudinaryImageId: "ee5f8e06b300efc07c9fe3f4df40dfc4",
+            locality: "Byatarayanapura",
+            areaName: "Sahakara Nagar",
+            costForTwo: "₹400 for two",
+            cuisines: [
+                "Burgers",
+                "Beverages",
+                "Cafe",
+                "Desserts"
+            ],
+            avgRating: 4.2,
+            feeDetails: {
+                restaurantId: "23752",
+                fees: [
+                    {
+                        name: "BASE_DISTANCE",
+                        fee: 6400
+                    },
+                    {
+                        name: "BASE_TIME"
+                    },
+                    {
+                        name: "ANCILLARY_SURGE_FEE"
+                    }
+                ],
+                totalFee: 6400
+            },
+            parentId: "630",
+            avgRatingString: "4.2",
+            totalRatingsString: "10K+",
+            sla: {
+                deliveryTime: 33,
+                lastMileTravel: 7,
+                serviceability: "SERVICEABLE",
+                slaString: "33 mins",
+                lastMileTravelString: "7.0 km",
+                iconType: "ICON_TYPE_EMPTY"
+            },
+            availability: {
+                nextCloseTime: "2023-08-11 02:45:00",
+                opened: true
+            },
+            badges: {},
+            isOpen: true,
+            type: "F",
+            badgesV2: {
+                entityBadges: {
+                    imageBased: {},
+                    textBased: {},
+                    textExtendedBadges: {}
+                }
+            },
+            aggregatedDiscountInfoV3: {
+                header: "10% OFF",
+                subHeader: "ABOVE ₹999",
+                discountTag: "FLAT DEAL"
+            },
+            orderabilityCommunication: {
+                title: {},
+                subTitle: {},
+                message: {},
+                customIcon: {}
+            },
+            differentiatedUi: {
+                displayType: "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
+                differentiatedUiMediaDetails: {
+                    mediaType: "ADS_MEDIA_ENUM_IMAGE",
+                    lottie: {},
+                    video: {}
+                }
+            },
+            reviewsSummary: {},
+            displayType: "RESTAURANT_DISPLAY_TYPE_DEFAULT",
+            restaurantOfferPresentationInfo: {}
+        },
+        analytics: {},
+        cta: {
+            link: "https://www.swiggy.com/restaurants/mcdonalds-byatarayanapura-sahakara-nagar-bangalore-23752",
+            type: "WEBLINK"
+        }
+    },
+    {
+        info: {
+            id: "84919",
+            name: "Burger King",
+            cloudinaryImageId: "e33e1d3ba7d6b2bb0d45e1001b731fcf",
+            locality: "RMZ Galleraia",
+            areaName: "Yelahanka",
+            costForTwo: "₹350 for two",
+            cuisines: [
+                "Burgers",
+                "American"
+            ],
+            avgRating: 4.2,
+            feeDetails: {
+                restaurantId: "84919",
+                fees: [
+                    {
+                        name: "BASE_DISTANCE",
+                        fee: 5800
+                    },
+                    {
+                        name: "BASE_TIME"
+                    },
+                    {
+                        name: "ANCILLARY_SURGE_FEE"
+                    }
+                ],
+                totalFee: 5800
+            },
+            parentId: "166",
+            avgRatingString: "4.2",
+            totalRatingsString: "10K+",
+            sla: {
+                deliveryTime: 35,
+                lastMileTravel: 6.2,
+                serviceability: "SERVICEABLE",
+                slaString: "35 mins",
+                lastMileTravelString: "6.2 km",
+                iconType: "ICON_TYPE_EMPTY"
+            },
+            availability: {
+                nextCloseTime: "2023-08-10 23:00:00",
+                opened: true
+            },
+            badges: {},
+            isOpen: true,
+            type: "F",
+            badgesV2: {
+                entityBadges: {
+                    imageBased: {},
+                    textBased: {},
+                    textExtendedBadges: {}
+                }
+            },
+            aggregatedDiscountInfoV3: {
+                header: "EVERY ITEM",
+                subHeader: "@ ₹129",
+                discountCalloutInfo: {
+                    message: "Free Delivery",
+                    logoCtx: {
+                        logo: "v1655895371/free_delivery_logo_hqipbo.png"
+                    }
+                }
+            },
+            orderabilityCommunication: {
+                title: {},
+                subTitle: {},
+                message: {},
+                customIcon: {}
+            },
+            differentiatedUi: {
+                displayType: "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
+                differentiatedUiMediaDetails: {
+                    mediaType: "ADS_MEDIA_ENUM_IMAGE",
+                    lottie: {},
+                    video: {}
+                }
+            },
+            reviewsSummary: {},
+            displayType: "RESTAURANT_DISPLAY_TYPE_DEFAULT",
+            restaurantOfferPresentationInfo: {}
+        },
+        analytics: {},
+        cta: {
+            link: "https://www.swiggy.com/restaurants/burger-king-rmz-galleraia-yelahanka-bangalore-84919",
+            type: "WEBLINK"
+        }
+    },
+    {
+        info: {
+            id: "84747",
+            name: "The Belgian Waffle Co.",
+            cloudinaryImageId: "korllnl0tvxu3gkvmozq",
+            locality: "Park View Layout",
+            areaName: "Sahakara Nagar",
+            costForTwo: "₹200 for two",
+            cuisines: [
+                "Waffle",
+                "Desserts",
+                "Ice Cream",
+                "Beverages"
+            ],
+            avgRating: 4.4,
+            veg: true,
+            feeDetails: {
+                restaurantId: "84747",
+                fees: [
+                    {
+                        name: "BASE_DISTANCE",
+                        fee: 5800
+                    },
+                    {
+                        name: "BASE_TIME"
+                    },
+                    {
+                        name: "ANCILLARY_SURGE_FEE"
+                    }
+                ],
+                totalFee: 5800
+            },
+            parentId: "2233",
+            avgRatingString: "4.4",
+            totalRatingsString: "5K+",
+            sla: {
+                deliveryTime: 35,
+                lastMileTravel: 6.3,
+                serviceability: "SERVICEABLE",
+                slaString: "35 mins",
+                lastMileTravelString: "6.3 km",
+                iconType: "ICON_TYPE_EMPTY"
+            },
+            availability: {
+                nextCloseTime: "2023-08-11 04:00:00",
+                opened: true
+            },
+            badges: {},
+            isOpen: true,
+            aggregatedDiscountInfoV2: {},
+            type: "F",
+            badgesV2: {
+                entityBadges: {
+                    imageBased: {},
+                    textBased: {},
+                    textExtendedBadges: {}
+                }
+            },
+            orderabilityCommunication: {
+                title: {},
+                subTitle: {},
+                message: {},
+                customIcon: {}
+            },
+            differentiatedUi: {
+                displayType: "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
+                differentiatedUiMediaDetails: {
+                    mediaType: "ADS_MEDIA_ENUM_IMAGE",
+                    lottie: {},
+                    video: {}
+                }
+            },
+            reviewsSummary: {},
+            displayType: "RESTAURANT_DISPLAY_TYPE_DEFAULT",
+            restaurantOfferPresentationInfo: {}
+        },
+        analytics: {},
+        cta: {
+            link: "https://www.swiggy.com/restaurants/the-belgian-waffle-co-park-view-layout-sahakara-nagar-bangalore-84747",
+            type: "WEBLINK"
+        }
+    },
+    {
+        info: {
+            id: "384148",
+            name: "Chaayos Chai+Snacks=Relax",
+            cloudinaryImageId: "2beebd3688e63e027ee8a11c1c8a72c8",
+            locality: "Mathikere",
+            areaName: "New BEL Road",
+            costForTwo: "₹250 for two",
+            cuisines: [
+                "Bakery",
+                "Beverages",
+                "Chaat",
+                "Desserts",
+                "Home Food",
+                "Italian",
+                "Maharashtrian",
+                "Snacks",
+                "Street Food",
+                "Sweets"
+            ],
+            avgRating: 4.4,
+            feeDetails: {
+                restaurantId: "384148",
+                fees: [
+                    {
+                        name: "BASE_DISTANCE",
+                        fee: 5800
+                    },
+                    {
+                        name: "BASE_TIME"
+                    },
+                    {
+                        name: "ANCILLARY_SURGE_FEE"
+                    }
+                ],
+                totalFee: 5800
+            },
+            parentId: "281782",
+            avgRatingString: "4.4",
+            totalRatingsString: "1K+",
+            sla: {
+                deliveryTime: 33,
+                lastMileTravel: 6,
+                serviceability: "SERVICEABLE",
+                slaString: "33 mins",
+                lastMileTravelString: "6.0 km",
+                iconType: "ICON_TYPE_EMPTY"
+            },
+            availability: {
+                nextCloseTime: "2023-08-10 23:00:00",
+                opened: true
+            },
+            badges: {
+                textExtendedBadges: [
+                    {
+                        iconId: "guiltfree/GF_Logo_android_3x",
+                        shortDescription: "options available",
+                        fontColor: "#7E808C"
+                    }
+                ]
+            },
+            isOpen: true,
+            type: "F",
+            badgesV2: {
+                entityBadges: {
+                    imageBased: {},
+                    textBased: {},
+                    textExtendedBadges: {
+                        badgeObject: [
+                            {
+                                attributes: {
+                                    description: "",
+                                    fontColor: "#7E808C",
+                                    iconId: "guiltfree/GF_Logo_android_3x",
+                                    shortDescription: "options available"
+                                }
+                            }
+                        ]
+                    }
+                }
+            },
+            aggregatedDiscountInfoV3: {
+                header: "₹125 OFF",
+                subHeader: "ABOVE ₹499",
+                discountTag: "FLAT DEAL"
+            },
+            orderabilityCommunication: {
+                title: {},
+                subTitle: {},
+                message: {},
+                customIcon: {}
+            },
+            differentiatedUi: {
+                displayType: "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
+                differentiatedUiMediaDetails: {
+                    mediaType: "ADS_MEDIA_ENUM_IMAGE",
+                    lottie: {},
+                    video: {}
+                }
+            },
+            reviewsSummary: {},
+            displayType: "RESTAURANT_DISPLAY_TYPE_DEFAULT",
+            restaurantOfferPresentationInfo: {}
+        },
+        analytics: {},
+        cta: {
+            link: "https://www.swiggy.com/restaurants/chaayos-chai-snacks-relax-mathikere-new-bel-road-bangalore-384148",
+            type: "WEBLINK"
+        }
+    },
+    {
+        info: {
+            id: "31293",
+            name: "Subway",
+            cloudinaryImageId: "1ace5fa65eff3e1223feb696c956b38b",
+            locality: "Satellite Town",
+            areaName: "Yelahanka",
+            costForTwo: "₹350 for two",
+            cuisines: [
+                "Salads",
+                "Snacks",
+                "Desserts",
+                "Beverages"
+            ],
+            avgRating: 4.3,
+            feeDetails: {
+                restaurantId: "31293",
+                fees: [
+                    {
+                        name: "BASE_DISTANCE",
+                        fee: 5200
+                    },
+                    {
+                        name: "BASE_TIME"
+                    },
+                    {
+                        name: "ANCILLARY_SURGE_FEE"
+                    }
+                ],
+                totalFee: 5200
+            },
+            parentId: "2",
+            avgRatingString: "4.3",
+            totalRatingsString: "10K+",
+            sla: {
+                deliveryTime: 30,
+                lastMileTravel: 5.5,
+                serviceability: "SERVICEABLE",
+                slaString: "30 mins",
+                lastMileTravelString: "5.5 km",
+                iconType: "ICON_TYPE_EMPTY"
+            },
+            availability: {
+                nextCloseTime: "2023-08-11 00:40:00",
+                opened: true
+            },
+            badges: {},
+            isOpen: true,
+            type: "F",
+            badgesV2: {
+                entityBadges: {
+                    imageBased: {},
+                    textBased: {},
+                    textExtendedBadges: {}
+                }
+            },
+            aggregatedDiscountInfoV3: {
+                header: "30% OFF",
+                discountTag: "FLAT DEAL",
+                discountCalloutInfo: {
+                    message: "Free Delivery",
+                    logoCtx: {
+                        logo: "v1655895371/free_delivery_logo_hqipbo.png"
+                    }
+                }
+            },
+            orderabilityCommunication: {
+                title: {},
+                subTitle: {},
+                message: {},
+                customIcon: {}
+            },
+            differentiatedUi: {
+                displayType: "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
+                differentiatedUiMediaDetails: {
+                    mediaType: "ADS_MEDIA_ENUM_IMAGE",
+                    lottie: {},
+                    video: {}
+                }
+            },
+            reviewsSummary: {},
+            displayType: "RESTAURANT_DISPLAY_TYPE_DEFAULT",
+            restaurantOfferPresentationInfo: {}
+        },
+        analytics: {},
+        cta: {
+            link: "https://www.swiggy.com/restaurants/subway-satellite-town-yelahanka-bangalore-31293",
+            type: "WEBLINK"
+        }
+    },
+    {
+        info: {
+            id: "356931",
+            name: "Pizza Hut",
+            cloudinaryImageId: "2b4f62d606d1b2bfba9ba9e5386fabb7",
+            locality: "New BEL Road",
+            areaName: "HMT Layout",
+            costForTwo: "₹350 for two",
+            cuisines: [
+                "Pizzas"
+            ],
+            avgRating: 4,
+            feeDetails: {
+                restaurantId: "356931",
+                fees: [
+                    {
+                        name: "BASE_DISTANCE",
+                        fee: 2700
+                    },
+                    {
+                        name: "BASE_TIME"
+                    },
+                    {
+                        name: "ANCILLARY_SURGE_FEE"
+                    }
+                ],
+                totalFee: 2700
+            },
+            parentId: "721",
+            avgRatingString: "4.0",
+            totalRatingsString: "1K+",
+            sla: {
+                deliveryTime: 20,
+                lastMileTravel: 1.2,
+                serviceability: "SERVICEABLE",
+                slaString: "20 mins",
+                lastMileTravelString: "1.2 km",
+                iconType: "ICON_TYPE_EMPTY"
+            },
+            availability: {
+                nextCloseTime: "2023-08-10 23:00:00",
+                opened: true
+            },
+            badges: {},
+            isOpen: true,
+            type: "F",
+            badgesV2: {
+                entityBadges: {
+                    imageBased: {},
+                    textBased: {},
+                    textExtendedBadges: {}
+                }
+            },
+            aggregatedDiscountInfoV3: {
+                header: "30% OFF",
+                subHeader: "UPTO ₹75",
+                discountCalloutInfo: {
+                    message: "Free Delivery",
+                    logoCtx: {
+                        logo: "v1655895371/free_delivery_logo_hqipbo.png"
+                    }
+                }
+            },
+            orderabilityCommunication: {
+                title: {},
+                subTitle: {},
+                message: {},
+                customIcon: {}
+            },
+            differentiatedUi: {
+                displayType: "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
+                differentiatedUiMediaDetails: {
+                    mediaType: "ADS_MEDIA_ENUM_IMAGE",
+                    lottie: {},
+                    video: {}
+                }
+            },
+            reviewsSummary: {},
+            displayType: "RESTAURANT_DISPLAY_TYPE_DEFAULT",
+            restaurantOfferPresentationInfo: {}
+        },
+        analytics: {},
+        cta: {
+            link: "https://www.swiggy.com/restaurants/pizza-hut-new-bel-road-hmt-layout-bangalore-356931",
+            type: "WEBLINK"
+        }
+    },
+    {
+        info: {
+            id: "498298",
+            name: "Istah - The Mediterranean Way",
+            cloudinaryImageId: "67d4a416bf932f850b0a15ad33aae762",
+            locality: "3rd Phase",
+            areaName: "Yelahanka",
+            costForTwo: "₹250 for two",
+            cuisines: [
+                "Mediterranean",
+                "Snacks",
+                "Biryani",
+                "Grill",
+                "Kebabs",
+                "Arabian",
+                "Lebanese",
+                "Beverages",
+                "Desserts",
+                "Italian",
+                "Turkish"
+            ],
+            avgRating: 4.2,
+            feeDetails: {
+                restaurantId: "498298",
+                fees: [
+                    {
+                        name: "BASE_DISTANCE",
+                        fee: 3900
+                    },
+                    {
+                        name: "BASE_TIME"
+                    },
+                    {
+                        name: "ANCILLARY_SURGE_FEE"
+                    }
+                ],
+                totalFee: 3900
+            },
+            parentId: "3518",
+            avgRatingString: "4.2",
+            totalRatingsString: "1K+",
+            sla: {
+                deliveryTime: 26,
+                lastMileTravel: 4.9,
+                serviceability: "SERVICEABLE",
+                slaString: "26 mins",
+                lastMileTravelString: "4.9 km",
+                iconType: "ICON_TYPE_EMPTY"
+            },
+            availability: {
+                nextCloseTime: "2023-08-11 00:30:00",
+                opened: true
+            },
+            badges: {
+                textExtendedBadges: [
+                    {
+                        iconId: "guiltfree/GF_Logo_android_3x",
+                        shortDescription: "options available",
+                        fontColor: "#7E808C"
+                    }
+                ]
+            },
+            isOpen: true,
+            type: "F",
+            badgesV2: {
+                entityBadges: {
+                    imageBased: {},
+                    textBased: {},
+                    textExtendedBadges: {
+                        badgeObject: [
+                            {
+                                attributes: {
+                                    description: "",
+                                    fontColor: "#7E808C",
+                                    iconId: "guiltfree/GF_Logo_android_3x",
+                                    shortDescription: "options available"
+                                }
+                            }
+                        ]
+                    }
+                }
+            },
+            aggregatedDiscountInfoV3: {
+                header: "60% OFF",
+                subHeader: "UPTO ₹100",
+                discountCalloutInfo: {
+                    message: "Free Delivery",
+                    logoCtx: {
+                        logo: "v1655895371/free_delivery_logo_hqipbo.png"
+                    }
+                }
+            },
+            orderabilityCommunication: {
+                title: {},
+                subTitle: {},
+                message: {},
+                customIcon: {}
+            },
+            differentiatedUi: {
+                displayType: "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
+                differentiatedUiMediaDetails: {
+                    mediaType: "ADS_MEDIA_ENUM_IMAGE",
+                    lottie: {},
+                    video: {}
+                }
+            },
+            reviewsSummary: {},
+            displayType: "RESTAURANT_DISPLAY_TYPE_DEFAULT",
+            restaurantOfferPresentationInfo: {}
+        },
+        analytics: {},
+        cta: {
+            link: "https://www.swiggy.com/restaurants/istah-the-mediterranean-way-3rd-phase-yelahanka-bangalore-498298",
+            type: "WEBLINK"
+        }
+    }
+];
+const RestaurantCard = ({ name, cuisines, avgRating, cloudinaryImageId })=>{
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+        className: "card",
+        children: [
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
+                src: "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/" + cloudinaryImageId,
+                alt: "logo"
+            }, void 0, false, {
+                fileName: "App.js",
+                lineNumber: 759,
+                columnNumber: 7
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h2", {
+                children: name
+            }, void 0, false, {
+                fileName: "App.js",
+                lineNumber: 760,
+                columnNumber: 7
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h3", {
+                children: cuisines.join(" , ")
+            }, void 0, false, {
+                fileName: "App.js",
+                lineNumber: 761,
+                columnNumber: 7
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h4", {
+                children: [
+                    avgRating,
+                    " stars"
+                ]
+            }, void 0, true, {
+                fileName: "App.js",
+                lineNumber: 762,
+                columnNumber: 7
+            }, undefined)
+        ]
+    }, void 0, true, {
+        fileName: "App.js",
+        lineNumber: 758,
+        columnNumber: 10
+    }, undefined);
+};
+_c2 = RestaurantCard;
 const Body = ()=>{
-    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h4", {
-        children: "Body"
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+        className: "restaurant-list",
+        children: restaurantList.map((el, index)=>{
+            return /*#__PURE__*/ (0, _react.createElement)(RestaurantCard, {
+                ...el.info,
+                key: el.info.id,
+                __source: {
+                    fileName: "App.js",
+                    lineNumber: 774,
+                    columnNumber: 14
+                },
+                __self: undefined
+            });
+        })
     }, void 0, false, {
         fileName: "App.js",
-        lineNumber: 40,
+        lineNumber: 766,
         columnNumber: 10
     }, undefined);
 };
-_c2 = Body;
+_c3 = Body;
 const Footer = ()=>{
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h4", {
         children: "Footer"
     }, void 0, false, {
         fileName: "App.js",
-        lineNumber: 43,
+        lineNumber: 779,
         columnNumber: 10
     }, undefined);
 };
-_c3 = Footer;
+_c4 = Footer;
 const AppLayout = ()=>{
-    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactDefault.default).Fragment, {
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _jsxDevRuntime.Fragment), {
         children: [
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(Header, {}, void 0, false, {
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(HeaderComponent, {}, void 0, false, {
                 fileName: "App.js",
-                lineNumber: 47,
-                columnNumber: 8
+                lineNumber: 799,
+                columnNumber: 7
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(Body, {}, void 0, false, {
                 fileName: "App.js",
-                lineNumber: 48,
-                columnNumber: 8
+                lineNumber: 800,
+                columnNumber: 7
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(Footer, {}, void 0, false, {
                 fileName: "App.js",
-                lineNumber: 49,
-                columnNumber: 8
+                lineNumber: 801,
+                columnNumber: 7
             }, undefined)
         ]
-    }, void 0, true, {
-        fileName: "App.js",
-        lineNumber: 46,
-        columnNumber: 10
-    }, undefined);
+    }, void 0, true) //This is React.Fragment
+    ;
 };
-_c4 = AppLayout;
+_c5 = AppLayout;
 root.render(/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(AppLayout, {}, void 0, false, {
     fileName: "App.js",
-    lineNumber: 52,
+    lineNumber: 806,
     columnNumber: 13
 }, undefined));
-var _c, _c1, _c2, _c3, _c4;
+var _c, _c1, _c2, _c3, _c4, _c5;
 $RefreshReg$(_c, "Title");
-$RefreshReg$(_c1, "Header");
-$RefreshReg$(_c2, "Body");
-$RefreshReg$(_c3, "Footer");
-$RefreshReg$(_c4, "AppLayout");
+$RefreshReg$(_c1, "HeaderComponent");
+$RefreshReg$(_c2, "RestaurantCard");
+$RefreshReg$(_c3, "Body");
+$RefreshReg$(_c4, "Footer");
+$RefreshReg$(_c5, "AppLayout");
 
   $parcel$ReactRefreshHelpers$c1db.postlude(module);
 } finally {
