@@ -2963,7 +2963,7 @@ const root = (0, _clientDefault.default).createRoot(document.getElementById("roo
 const AppLayout = ()=>{
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _jsxDevRuntime.Fragment), {
         children: [
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(Header, {}, void 0, false, {
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _headerDefault.default), {}, void 0, false, {
                 fileName: "src/App.js",
                 lineNumber: 34,
                 columnNumber: 7
@@ -27462,12 +27462,15 @@ var _constantsJs = require("../constants.js");
 var _restaurantCardJs = require("./RestaurantCard.js");
 var _restaurantCardJsDefault = parcelHelpers.interopDefault(_restaurantCardJs);
 var _s = $RefreshSig$();
-function filterData() {}
+function filterData(searchText, restaurants) {
+    const filter = restaurants.filter((element)=>element.info.name.includes(searchText));
+    return filter;
+}
 const Body = ()=>{
     _s();
     const [restaurants, setRestaurants] = (0, _react.useState)((0, _constantsJs.restaurantList));
-    const [searchInput, setSearchInput] = (0, _react.useState)("");
-    //useState returns an array of 2 elements = [variable name , function to update the variable] 
+    const [searchText, setSearchText] = (0, _react.useState)("");
+    //useState returns an array of 2 elements = [variable name , function to update the variable]
     //we destructure the array to get the variable and the function to update the variable
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _jsxDevRuntime.Fragment), {
         children: [
@@ -27478,28 +27481,29 @@ const Body = ()=>{
                         type: "text",
                         className: "search-input",
                         placeholder: "Search",
-                        value: searchInput,
-                        onChange: (e)=>setSearchInput(e.target.value)
+                        value: searchText,
+                        onChange: (e)=>setSearchText(e.target.value)
                     }, void 0, false, {
                         fileName: "src/components/Body.js",
-                        lineNumber: 13,
+                        lineNumber: 16,
                         columnNumber: 9
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
                         className: "search-btn",
-                        children: [
-                            "Search - ",
-                            searchInput
-                        ]
-                    }, void 0, true, {
+                        onClick: ()=>{
+                            const data = filterData(searchText, restaurants);
+                            setRestaurants(data);
+                        },
+                        children: "Search"
+                    }, void 0, false, {
                         fileName: "src/components/Body.js",
-                        lineNumber: 14,
+                        lineNumber: 17,
                         columnNumber: 9
                     }, undefined)
                 ]
             }, void 0, true, {
                 fileName: "src/components/Body.js",
-                lineNumber: 12,
+                lineNumber: 15,
                 columnNumber: 7
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -27510,7 +27514,7 @@ const Body = ()=>{
                         key: el.info.id,
                         __source: {
                             fileName: "src/components/Body.js",
-                            lineNumber: 18,
+                            lineNumber: 24,
                             columnNumber: 16
                         },
                         __self: undefined
@@ -27518,13 +27522,13 @@ const Body = ()=>{
                 })
             }, void 0, false, {
                 fileName: "src/components/Body.js",
-                lineNumber: 16,
+                lineNumber: 22,
                 columnNumber: 7
             }, undefined)
         ]
     }, void 0, true);
 };
-_s(Body, "U4nr/YHaiILYcQeJ3syoVNAv1BU=");
+_s(Body, "R670WQcQR09XVkJ/Uv2E54gNhok=");
 _c = Body;
 exports.default = Body;
 var _c;
